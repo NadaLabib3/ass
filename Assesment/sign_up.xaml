@@ -1,0 +1,47 @@
+﻿<Page x:Class="Assesment.sign_up"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Assesment"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="sign_up">
+
+    <Grid Background="White">
+        <Label Content="sign_up^^!" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="115,80,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="118,119,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Mobile_number:" HorizontalAlignment="Left" Margin="115,165,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="115,0,0,0" VerticalAlignment="Center" FontSize="18"/>
+        <Label HorizontalAlignment="Left" Margin="115,247,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Age:" HorizontalAlignment="Left" Margin="115,286,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Gender:" HorizontalAlignment="Left" Margin="110,340,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Type:" HorizontalAlignment="Left" Margin="123,379,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="name_t" HorizontalAlignment="Left" Margin="255,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="email_t" HorizontalAlignment="Left" Margin="255,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="phone_t" HorizontalAlignment="Left" Margin="255,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="pass_t" HorizontalAlignment="Left" Margin="255,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="conf_t" HorizontalAlignment="Left" Margin="295,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="confirm_Password:" HorizontalAlignment="Left" Margin="123,257,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="age_t" HorizontalAlignment="Left" Margin="295,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <RadioButton Content="Male" HorizontalAlignment="Left" Margin="230,352,0,0" VerticalAlignment="Top" Name="Radiomale"/>
+        <RadioButton Content="Female" HorizontalAlignment="Center" Margin="0,348,0,0" VerticalAlignment="Top" Name="Radiofemale"/>
+        <RadioButton Content="User" HorizontalAlignment="Left" Margin="230,401,0,0" VerticalAlignment="Top" Name="Radiouser"/>
+        <RadioButton Content="Admin" HorizontalAlignment="Center" Margin="0,394,0,0" VerticalAlignment="Top" Name="Radioadmin"/>
+        <Label Content="City:" HorizontalAlignment="Left" Margin="495,257,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="combo_t" Margin="565,258,125,159">
+            <ComboBoxItem>
+                cairo
+            </ComboBoxItem>
+            <ComboBoxItem>
+                city
+            </ComboBoxItem>
+            <ComboBoxItem>
+                tanta
+            </ComboBoxItem>
+        </ComboBox>
+        <Button Content="Sign_Up" HorizontalAlignment="Left" Margin="471,408,0,0" VerticalAlignment="Top" FontSize="20" Click="Button_Click"/>
+        <Button Content="already_have_account" HorizontalAlignment="Left" Margin="620,412,0,0" VerticalAlignment="Top" FontSize="18"/>
+    </Grid>
+</Page>

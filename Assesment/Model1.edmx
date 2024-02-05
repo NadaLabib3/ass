@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="pharmasyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="drug">
+          <Key>
+            <PropertyRef Name="namee" />
+          </Key>
+          <Property Name="price" Type="int" />
+          <Property Name="quantity" Type="varchar" MaxLength="50" />
+          <Property Name="namee" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="useres">
+          <Key>
+            <PropertyRef Name="mobile_number" />
+          </Key>
+          <Property Name="id" Type="int" />
+          <Property Name="namee" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="mobile_number" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="passworde" Type="varchar" MaxLength="50" />
+          <Property Name="age" Type="int" />
+          <Property Name="city" Type="varchar" MaxLength="50" />
+          <Property Name="gender" Type="varchar" MaxLength="50" />
+          <Property Name="typee" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="pharmasyModelStoreContainer">
+          <EntitySet Name="drug" EntityType="Self.drug" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="useres" EntityType="Self.useres" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="pharmasyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="drug">
+          <Key>
+            <PropertyRef Name="namee" />
+          </Key>
+          <Property Name="price" Type="Int32" />
+          <Property Name="quantity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="namee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="usere">
+          <Key>
+            <PropertyRef Name="mobile_number" />
+          </Key>
+          <Property Name="id" Type="Int32" />
+          <Property Name="namee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mobile_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passworde" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="age" Type="Int32" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="typee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="pharmasyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="drugs" EntityType="Self.drug" />
+          <EntitySet Name="useres" EntityType="Self.usere" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="pharmasyModelStoreContainer" CdmEntityContainer="pharmasyEntities">
+          <EntitySetMapping Name="drugs">
+            <EntityTypeMapping TypeName="pharmasyModel.drug">
+              <MappingFragment StoreEntitySet="drug">
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="namee" ColumnName="namee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="useres">
+            <EntityTypeMapping TypeName="pharmasyModel.usere">
+              <MappingFragment StoreEntitySet="useres">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="namee" ColumnName="namee" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobile_number" ColumnName="mobile_number" />
+                <ScalarProperty Name="passworde" ColumnName="passworde" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="typee" ColumnName="typee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

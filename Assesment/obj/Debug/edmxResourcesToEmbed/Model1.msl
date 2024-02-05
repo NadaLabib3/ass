@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="pharmasyModelStoreContainer" CdmEntityContainer="pharmasyEntities">
+    <EntitySetMapping Name="drugs">
+      <EntityTypeMapping TypeName="pharmasyModel.drug">
+        <MappingFragment StoreEntitySet="drug">
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="namee" ColumnName="namee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="useres">
+      <EntityTypeMapping TypeName="pharmasyModel.usere">
+        <MappingFragment StoreEntitySet="useres">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="namee" ColumnName="namee" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile_number" ColumnName="mobile_number" />
+          <ScalarProperty Name="passworde" ColumnName="passworde" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="typee" ColumnName="typee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

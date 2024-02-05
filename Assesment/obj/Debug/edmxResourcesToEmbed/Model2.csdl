@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pharmasyModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="druga">
+    <Key>
+      <PropertyRef Name="namee" />
+    </Key>
+    <Property Name="namee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="price" Type="Int32" />
+  </EntityType>
+  <EntityType Name="userer">
+    <Key>
+      <PropertyRef Name="mobile_number" />
+    </Key>
+    <Property Name="id" Type="Int32" />
+    <Property Name="namee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mobile_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="passworde" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="typee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="pharmasyEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="drugas" EntityType="Self.druga" />
+    <EntitySet Name="userers" EntityType="Self.userer" />
+  </EntityContainer>
+</Schema>
